@@ -645,7 +645,28 @@ footer {
 
 
 .map-container {
+  position: relative;
+  width: 100%;        
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 20px auto;    /* center on page */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* responsive width */
+  height: 100%;  /* responsive height */
+  border: 0;
+}
+
+.google-maps {
   display: flex;
-  justify-content: center; /* centers horizontally */
-  margin-top: 20px; /* optional spacing */
+  color: #1e3a5f;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center (if needed) */
+  margin: 20px 0;
 }
