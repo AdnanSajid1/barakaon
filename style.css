@@ -642,3 +642,10 @@ footer {
   color: #39bb53ff;
   font-weight: 750;
 }
+
+
+.map-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  margin-top: 20px; /* optional spacing */
+}
