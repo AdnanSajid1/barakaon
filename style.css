@@ -68,7 +68,7 @@ header {
 
 /* Hero */
 .hero {
-  background: url('images/hero.jpg') no-repeat center center;
+  background: url('images/hero1.jpeg') no-repeat center center;
   background-size: cover;
   color: white;
   text-align: center;
@@ -76,7 +76,8 @@ header {
   width: 100%;          /* full width */
   margin: 0;            /* remove auto centering */
   max-width: 100%;      /* prevent 1100px restriction */
-  padding: 120px 20px;  /* keep spacing */
+  padding: 120px 20px; 
+  height: 80vh /* keep spacing */
 }
 
 
@@ -272,8 +273,11 @@ footer {
     display: flex;
   }
 
-  .hamburger {
+   .hamburger {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
   }
 
   .hero h1 {
@@ -331,4 +335,310 @@ footer {
 .contact-box:hover {
   border-color: #f4b400; /* yellow border */
   transform: translateY(-3px);
+}
+
+
+
+
+
+/* Top Info Bar */
+.top-bar {
+  background: #0d2a4d; /* dark blue */
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px 20px;
+}
+
+.top-bar-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-social a {
+  color: white;
+  margin-left: 12px;
+  font-size: 14px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.top-social a:hover {
+  color: #f4b400; /* yellow on hover */
+  transform: scale(1.2);
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+
+.top-social a {
+  text-decoration: none; /* remove underline */
+  color: white; /* keep icon color consistent */
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.top-social a:hover {
+  color: #ffcc00; /* optional hover effect */
+}
+
+
+.top-time {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #fff; /* White divider line */
+}
+
+.top-time i {
+  margin-right: 8px;
+}
+
+
+
+
+
+
+/* Header */
+#main-header {
+  background: 1e3a5f;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.header-logo img {
+  max-height: 60px;
+}
+
+/* Contact Info */
+.header-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.info-item i {
+  color: #f4b400; /* yellow accent */
+  font-size: 18px;
+}
+
+.info-item label {
+  font-weight: 600;
+  display: block;
+}
+
+.info-item a {
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* inherit parent text color */
+  font-weight: 500;        /* optional - for consistency */
+}
+
+.info-item a:hover {
+  color: #1e3a5f;          /* optional hover color (dark blue) */
+  text-decoration: underline; /* if you want hover underline */
+}
+
+/* .info-item a {
+  color: #333;
+  text-decoration: none;
+} */
+
+.info-item span {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f4b400;
+}
+
+/* Button */
+.header-btn .btn {
+  background: #f4b400;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.header-btn .btn:hover {
+  background: #d39d00;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .header-info {
+    display: none; /* hide top info in mobile */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Header */
+#main-header {
+  background: #1e3a5f; /* fixed */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Contact Info */
+.info-item a,
+.info-item label,
+.info-item span {
+  color: #fff; /* white text */
+}
+
+/* Navigation Links */
+.nav-links a {
+  text-decoration: none;
+  color: #1e3a5f; /* white */
+  font-weight: 750;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: black; /* yellow hover */
+}
+
+/* Button */
+.header-btn .btn {
+  background: #f4b400;
+  color: #fff; /* keep white text */
+}
+
+/* Make whole info-item clickable without underline */
+.header-info .info-item {
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* keep text color consistent */
+}
+
+.header-info .info-item:hover {
+  text-decoration: none;   /* no underline on hover */
+  background: rgba(255, 255, 255, 0.08); /* optional subtle hover bg */
+  border-radius: 5px;      /* keeps hover neat */
+}
+
+
+
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.company-details {
+  margin-top: 25px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+.detail-item i {
+  color: #39bb53ff;
+  font-size: 18px;
+}
+
+.welcome-barakaon{
+  color: #39bb53ff;
+  font-weight: 750;
 }

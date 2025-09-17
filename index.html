@@ -1,3 +1,7 @@
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +13,36 @@
   <link rel="icon" type="image/png" href="images/logo.jpeg">
 </head>
 <body>
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="top-bar-content">
+    <div class="top-time">
+      <i class="fa-regular fa-clock"></i>
+      <span>Sat - Thu: 9:00 am - 5.00pm</span>
+    </div>
+    <div class="top-social">
+      <a href="https://www.facebook.com/people/Barakaon-International-General-Trading-LlC/61580445398779/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://wa.me/971561716957" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/barakaoninternational" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/@barakaoninternationalgeneral" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+</div>
 
   <!-- Navbar -->
-  <header>
+  <!-- <header>
     <div class="navbar">
       <div class="logo">
         <a href="#hero">
-          <img src="images/logo.jpeg" alt="Barakaon Logo">
+          <img src="images/barakaon_logo.png" alt="Barakaon Logo">
         </a>
       </div>
       <nav>
@@ -32,28 +59,116 @@
         </div>
       </nav>
     </div>
-  </header>
+  </header> -->
+
+<!-- Header -->
+<header id="main-header">
+  <div class="container header-container">
+    <!-- Logo -->
+    <div class="header-logo">
+      <a href="#hero">
+        <img src="images/barakaon_logo.png" alt="Barakaon Logo">
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+<!-- Contact Info -->
+<div class="header-info">
+
+  <!-- Phone -->
+  <a href="tel:+971561716957" class="info-item">
+    <i class="fa-solid fa-phone"></i>
+    <div>
+      <label>Call Us: 04 835 4366</label>
+      <span>(Sat - Thu)</span>
+    </div>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:bigtbarakaon@gmail.com" class="info-item">
+    <i class="fa-solid fa-envelope"></i>
+    <div>
+      <label>Email:</label>
+      <span>bigtbarakaon@gmail.com</span>
+    </div>
+  </a>
+
+  <!-- Address -->
+  <a href="https://www.google.com/maps?q=M-04,+First+Floor,+Al+Saudi+Building,+Deira+-+Dubai" target="_blank" class="info-item">
+    <i class="fa-solid fa-map-marker-alt"></i>
+    <div>
+      <label>Address:</label>
+      <span>M-04, First Floor, Al Saudi Building, Deira – Dubai, U.A.E</span>
+    </div>
+  </a>
+
+</div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="hamburger" ">
+        <div></div><div></div><div></div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#terms">Terms</a></li>
+      </ul>
+    </nav>
+
+    <!-- Quote Button -->
+    <div class="header-btn">
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+
+
+
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Welcome to Barakaon International General Trading L.L.C</h1>
+      <h1>Welcome to <span class="welcome-barakaon"> Barakaon International General Trading L.L.C</span></h1>
       <p>
         A Dubai-based trading company delivering quality products and trusted services across industries worldwide.
       </p>
-      <ul class="hero-details">
-        <li>✔ Licensed by Dubai Economic Department</li>
-        <li>✔ Trade License No: 1285063</li>
-        <li>✔ Company Registration No: 2574220</li>
-        <li>✔ Established: 10/01/2024</li>
-      </ul>
       <a href="#about" class="btn">Discover More</a>
     </div>
   </section>
 
   <!-- About Us -->
-  <section class="about" id="about">
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <div class="about-content">
+    <p>
+      <strong>Barakaon International General Trading L.L.C</strong> is a registered company in Dubai, licensed by the Dubai Economic Department. 
+      Since our establishment in <b>January 2024</b>, we have been committed to building strong partnerships in both local and global markets. 
+      Our goal is to become a trusted global trading company from the UAE, connecting businesses worldwide with premium products and reliable services.
+    </p>
+    
+    <p>
+      Our vision is to <em>lead the trading industry</em> with integrity, innovation, and long-term value. 
+      Guided by our mission, we strive to deliver products that meet international standards, foster transparent partnerships, 
+      and support sustainable global growth through responsible trading.
+    </p>
+
+    <div class="company-details">
+      <div class="detail-item"><i class="fa-solid fa-check-circle"></i> Licensed by Dubai Economic Department</div>
+      <div class="detail-item"><i class="fa-solid fa-check-circle"></i> Trade License No: 1285063</div>
+      <div class="detail-item"><i class="fa-solid fa-check-circle"></i> Company Registration No: 2574220</div>
+      <div class="detail-item"><i class="fa-solid fa-check-circle"></i> Established: 10/01/2024</div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- <section class="about" id="about">
     <h2>About Us</h2>
     <div class="about-grid">
       <div class="about-card">
@@ -73,7 +188,7 @@
         </ul>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Services -->
   <section class="services" id="services">
@@ -84,6 +199,7 @@
       <div class="service-card">Electronics & Appliances</div>
       <div class="service-card">Building Materials</div>
       <div class="service-card">Other General Trading Products</div>
+      <div class="service-card">Ready Made Garments & Textile</div>
     </div>
   </section>
 
