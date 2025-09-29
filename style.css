@@ -703,22 +703,31 @@ footer {
   align-items: start;
 }
 
+.contact-box {
+  display: grid;
+  grid-template-columns: auto 1fr; /* shrink left column to fit content */
+  gap: 8px 16px;                  /* spacing */
+  align-items: start;
+}
+
 .contact-box p {
-  display: contents; /* let children participate directly in grid */
+  display: contents; /* children directly in grid */
+  margin: 0;         /* remove extra p margin */
 }
 
 .contact-box strong {
-  grid-column: 1;     /* labels always left */
-  text-align: right;  /* right-align for neat look */
+  grid-column: 1;     
+  text-align: left;  /* align left instead of right */
   color: #333;
   font-weight: 600;
 }
 
 .contact-box a,
-.contact-box span,
-.contact-box {
-  grid-column: 2;     /* values always right */
+.contact-box span {
+  grid-column: 2;     
   color: #1e3a5f;
   text-decoration: none;
-  word-break: break-word; /* prevent overflow */
+  word-break: break-word;
 }
+
+
