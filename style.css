@@ -42,7 +42,7 @@ header {
 }
 
 .nav-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   transition: 0.3s;
   font-weight: bold;
@@ -278,6 +278,8 @@ footer {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    color: #f4b400
+
   }
 
   .hero h1 {
@@ -576,13 +578,14 @@ footer {
 /* Navigation Links */
 .nav-links a {
   text-decoration: none;
-  color: #1e3a5f; /* white */
+  color: #fff; /* white */
   font-weight: 750;
   transition: color 0.3s;
+  cursor: pointer
 }
 
 .nav-links a:hover {
-  color: black; /* yellow hover */
+  color: #f4b400; /* yellow hover */
 }
 
 /* Button */
@@ -603,6 +606,13 @@ footer {
   border-radius: 5px;      /* keeps hover neat */
 }
 
+#main-header {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.nav-links a.active {
+  color: #f4b400;
+  border-bottom: 2px solid #f4b400;
+}
 
 
 .about-content {
@@ -669,4 +679,34 @@ footer {
   justify-content: center; /* horizontal center */
   align-items: center;     /* vertical center (if needed) */
   margin: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    background: #fff;
+  }
+  .nav-links a {
+    color: #1e3a5f; /* dark blue text for contrast */
+  }
+  .nav-links a:hover {
+    color: #f4b400; /* keep yellow hover */
+  }
+}
+
+
+.contact-box p {
+  display: flex;
+  align-items: center;
+  gap: 8px;         /* space between label & text */
+  flex-wrap: nowrap; /* prevent breaking to new line */
+  white-space: nowrap; /* force single-line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* adds "..." if text is too long */
+}
+.contact-box strong {
+  min-width: 100px; /* keeps labels aligned */
+}
+.contact-box a {
+  color: #1e3a5f;
+  text-decoration: none;
 }
