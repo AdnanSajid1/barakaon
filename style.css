@@ -57,12 +57,14 @@ header {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  background: #fff
+  
 }
 
 .hamburger div {
   width: 25px;
   height: 3px;
-  background: white;
+  background: #fff;
   margin: 4px;
 }
 
@@ -279,6 +281,7 @@ footer {
     gap: 5px;
     cursor: pointer;
     color: #f4b400
+    
 
   }
 
@@ -525,6 +528,7 @@ footer {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .hamburger div {
@@ -692,21 +696,29 @@ footer {
     color: #f4b400; /* keep yellow hover */
   }
 }
-
+.contact-box {
+  display: grid;
+  grid-template-columns: 120px 1fr; /* left column fixed, right flexible */
+  gap: 12px 16px;                  /* row + column gaps */
+  align-items: start;
+}
 
 .contact-box p {
-  display: flex;
-  align-items: center;
-  gap: 8px;         /* space between label & text */
-  flex-wrap: nowrap; /* prevent breaking to new line */
-  white-space: nowrap; /* force single-line */
-  overflow: hidden;
-  text-overflow: ellipsis; /* adds "..." if text is too long */
+  display: contents; /* let children participate directly in grid */
 }
+
 .contact-box strong {
-  min-width: 100px; /* keeps labels aligned */
+  grid-column: 1;     /* labels always left */
+  text-align: right;  /* right-align for neat look */
+  color: #333;
+  font-weight: 600;
 }
-.contact-box a {
+
+.contact-box a,
+.contact-box span,
+.contact-box {
+  grid-column: 2;     /* values always right */
   color: #1e3a5f;
   text-decoration: none;
+  word-break: break-word; /* prevent overflow */
 }
